@@ -1,0 +1,19 @@
+This file describes the C-- syntax /semantic. 
+
+C-- handles only int strings, and arrays. 
+A programm is a [var_declaration list] where a [var_declaration] is etiher :
+	- a variable decalaration CDECL x (equivalent to int x in C)
+	- function definition CFUN (f, l, c) ( equivalent in C to 
+		int f(l) { c}) where [l] is a [var_declaration list], containing exlusively 
+		CDECL occurences
+	- the same thing holds for CBLOCK (l, [c_1; ... ; c_n]) , where [l] contains only
+		CDECL of local variables
+
+
+This compiler only handles the compilation of 1 file, 
+we consider that a file is the concatenation of all the source file that compose it
+
+
+A rigorous definition of C-- is developed in the pdf file semantic.pdf . Unfortunately, it is only available in french. 
+It is an extract of the programming course of Jean Goubault Larrecq. The full course is available here : http://www.lsv.fr/~goubault/ , in teaching, or directly
+in lecture notes " programming and semantics". 
